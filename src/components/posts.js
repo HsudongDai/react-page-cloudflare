@@ -7,7 +7,7 @@ const Posts = () => {
     useEffect(() => {
         const getPosts = async () => {
             const resp = await fetch(
-                `bold-scene-1ac9.celestial-moor.workers.dev/api/posts`
+                `my-app.celestial-moor.workers.dev/api/posts`
             );
             const postsResp = await resp.json();
             setPosts(postsResp);
