@@ -16,17 +16,17 @@ const Post = ({id}) => {
         getPost();
     }, [id]);
 
-    if (!Object.keys(post).length) {
+    if (post == undefined) {
         return <div />;
     }
 
     return (
         <div>
             <h1>{post.title}</h1>
-            <p>{post.text}</p>
-            <p>
+            <p>{post.content}</p>
+            {/* <p>
                 <em>Published {new Date(post.published_at).toLocaleString()}</em>
-            </p>
+            </p> */}
             <p>
                 <Link to="/">Go back</Link>
             </p>
