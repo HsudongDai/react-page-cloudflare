@@ -10,13 +10,14 @@ const Post = ({id}) => {
                 `my-app.celestial-moor.workers.dev/posts/${id}`
             );
             const postResp = await resp.json();
-            setPost(postResp);
+            const postContent = JSON.parse(postResp)
+            setPost(postContent);
         };
 
         getPost();
     }, [id]);
 
-    if (post == undefined) {
+    if (post === undefined) {
         return <div />;
     }
 

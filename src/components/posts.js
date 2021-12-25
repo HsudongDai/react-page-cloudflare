@@ -9,8 +9,10 @@ const Posts = () => {
       const resp = await fetch(
         "https://my-app.celestial-moor.workers.dev/posts"
       );
-      const postsResp = await resp.json();
-      setPosts(postsResp);
+      const postsResp = await resp.json()
+      const postsList = JSON.parse(postsResp)
+      // console.log(postsResp)
+      setPosts(postsList);
     };
 
     getPosts();
