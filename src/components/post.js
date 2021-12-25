@@ -7,7 +7,7 @@ const Post = ({id}) => {
     useEffect(() => {
         const getPost = async () => {
             const resp = await fetch(
-                `my-app.celestial-moor.workers.dev/api/posts/${id}`
+                `my-app.celestial-moor.workers.dev/posts/${id}`
             );
             const postResp = await resp.json();
             setPost(postResp);
