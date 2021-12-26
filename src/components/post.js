@@ -11,7 +11,12 @@ const Post = (id) => {
             );
             const postResp = await resp.json();
             // const postContent = JSON.parse(postResp)
-            setPost(postResp);
+            if (typeof postResp !== "object") {
+                const parsedResp = JSON.parse(postResp)
+                setPost(parsedResp)
+            } else {
+                setPost(postResp);
+            }         
         };
 
         getPost();
@@ -23,6 +28,7 @@ const Post = (id) => {
 
     return (
         <div>
+            <h1>I did see the page!!!</h1>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             {/* <p>
