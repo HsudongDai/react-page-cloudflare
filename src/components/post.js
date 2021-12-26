@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 import { Link } from "@reach/router";
 
-const Post = ({id}) => {
+const Post = (id) => {
     const [post, setPost] = useState({});
 
     useEffect(() => {
