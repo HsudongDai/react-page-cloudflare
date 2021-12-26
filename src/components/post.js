@@ -10,8 +10,8 @@ const Post = ({id}) => {
                 `my-app.celestial-moor.workers.dev/posts/${id}`
             );
             const postResp = await resp.json();
-            const postContent = JSON.parse(postResp)
-            setPost(postContent);
+            // const postContent = JSON.parse(postResp)
+            setPost(postResp);
         };
 
         getPost();
